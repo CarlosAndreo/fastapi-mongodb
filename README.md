@@ -26,6 +26,7 @@ This is a ready-to-use project template for building FastAPI applications with M
 
 - Email verification.
 - Handler exceptions.
+- Refresh token.
 
 ## :hammer_and_wrench: Stack
 - [![Python][python-badge]][python-url] - Programming language.
