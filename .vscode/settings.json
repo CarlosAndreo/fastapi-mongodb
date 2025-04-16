@@ -1,0 +1,8 @@
+{
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "ruff.configurationPreference": "filesystemFirst",
+    "ruff.configuration": "${workspaceFolder}/backend/ruff.toml",
+}
