@@ -44,9 +44,9 @@ user_router = APIRouter(prefix="/user", tags=["user"])
         },
     },
     response_model=User,
-    operation_id="register_user",
+    operation_id="register",
 )
-async def register_user(user: UserCreate) -> User:
+async def register(user: UserCreate) -> User:
     """
     Register a new user in the database
     """
@@ -139,9 +139,9 @@ async def login(
         },
     },
     response_model=User,
-    operation_id="get_current_user",
+    operation_id="me",
 )
-async def get_current_user(
+async def me(
     current_user: Annotated[User, Depends(get_current_user)],
 ) -> User:
     """
