@@ -1,7 +1,7 @@
 [project]
 name = "fastapi-mongodb"
 version = "0.1.0"
-description = "Ready-to-use FastAPI template with MongoDB."
+description = "FastAPI template with MongoDB."
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.13"
@@ -12,11 +12,11 @@ prod = [
   "fastapi[standard]==0.115.12",
   "motor==3.7.0",
   "passlib[bcrypt]==1.7.4",
-  "pydantic-settings==2.8.1",
+  "pydantic-settings==2.9.0",
   "pyjwt==2.10.1",
 ]
 lint = [
-  "ruff==0.11.5",
+  "ruff==0.11.6",
 ]
 
 [tool.uv]
