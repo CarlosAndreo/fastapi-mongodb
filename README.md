@@ -31,7 +31,7 @@ This is a ready-to-use project template for building FastAPI applications with M
 ## :hammer_and_wrench: Stack
 - [![Python][python-badge]][python-url] - Programming language.
 - [![FastAPI][fastapi-badge]][fastapi-url] - Python framework for web applications to expose the API.
-- [![MongoDB][mongodb-badge]][mongodb-url] - NoSQL database designed to store trial networks.
+- [![MongoDB][mongodb-badge]][mongodb-url] - NoSQL database.
 
 ## :rocket: Getting Started Locally
 

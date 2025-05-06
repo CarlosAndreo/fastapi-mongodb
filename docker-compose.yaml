@@ -1,7 +1,7 @@
 services:
 
   mongodb:
-    image: mongo:8.0.8-noble
+    image: mongo:8.0.9-noble
     container_name: ${MONGO_INITDB_DATABASE}
     restart: always
     ports:
