@@ -1,4 +1,4 @@
-FROM python:3.13.3-slim
+FROM python:3.13.7-slim
 
 ENV UV_HOME="/root/.uv"
 ENV PATH="/root/.uv:${PATH}"
