@@ -9,14 +9,14 @@ authors = [{ name = "Carlos Andreo", email = "c.andreo@uma.es" }]
 
 [dependency-groups]
 prod = [
-  "fastapi[standard]==0.116.1",
+  "fastapi[standard]==0.117.1",
   "motor==3.7.1",
   "passlib[bcrypt]==1.7.4",
   "pydantic-settings==2.10.1",
   "pyjwt==2.10.1",
 ]
 lint = [
-  "ruff==0.13.0",
+  "ruff==0.13.1",
 ]
 
 [tool.uv]
