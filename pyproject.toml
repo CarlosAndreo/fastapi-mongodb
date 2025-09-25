@@ -12,7 +12,7 @@ prod = [
   "fastapi[standard]==0.117.1",
   "motor==3.7.1",
   "passlib[bcrypt]==1.7.4",
-  "pydantic-settings==2.10.1",
+  "pydantic-settings==2.11.0",
   "pyjwt==2.10.1",
 ]
 lint = [
