@@ -1,4 +1,4 @@
-from core.security import hash_password
+from core.security import get_password_hash
 from repositories.user import find_user_by_username, insert_user, update_user
 from schemas.user import User, UserCreate, UserInDB
 
@@ -22,7 +22,7 @@ async def create_user(user: UserCreate) -> User | None:
     """
     Create user in the database
     """
-    hashed_password = hash_password(password=user.password)
+    hashed_password = get_password_hash(password=user.password)
     user_in_db = UserInDB(
         **user.model_dump(exclude={"password"}), hashed_password=hashed_password
     )
@@ -34,7 +34,7 @@ async def change_password(user: User, new_password: str) -> User | None:
     """
     Change user password
     """
-    hashed_password = hash_password(password=new_password)
+    hashed_password = get_password_hash(password=new_password)
     user_in_db = UserInDB(
         **user.model_dump(exclude={"password"}), hashed_password=hashed_password
     )

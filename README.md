@@ -86,7 +86,7 @@ The mongo-express UI will be available at `http://localhost:8081`.
 [license-url]: https://github.com/CarlosAndreo/fastapi-mongodb/blob/main/LICENSE
 [python-badge]: https://img.shields.io/badge/Python-3.13.7-blue?style=for-the-badge&logo=python&logoColor=white&labelColor=3776AB
 [python-url]: https://www.python.org/downloads/release/python-3137/
-[fastapi-badge]: https://img.shields.io/badge/FastAPI-0.117.1-blue?style=for-the-badge&logo=fastapi&logoColor=white&labelColor=009688
+[fastapi-badge]: https://img.shields.io/badge/FastAPI-0.118.0-blue?style=for-the-badge&logo=fastapi&logoColor=white&labelColor=009688
 [fastapi-url]: https://fastapi.tiangolo.com/
 [mongodb-badge]: https://img.shields.io/badge/MongoDB-8.0-green?style=for-the-badge&logo=mongodb&logoColor=white&labelColor=47A248
 [mongodb-url]: https://www.mongodb.com/
