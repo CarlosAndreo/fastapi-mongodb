@@ -5,7 +5,7 @@ description = "FastAPI template with MongoDB."
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.13"
-authors = [{ name = "Carlos Andreo", email = "c.andreo@uma.es" }]
+authors = [{ name = "Carlos Andreo", email = "c.andreolopez@gmail.com" }]
 
 [dependency-groups]
 prod = [
