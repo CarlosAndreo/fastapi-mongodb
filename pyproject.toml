@@ -16,7 +16,7 @@ prod = [
   "pyjwt==2.10.1",
 ]
 lint = [
-  "ruff==0.13.2",
+  "ruff==0.13.3",
 ]
 
 [tool.uv]
