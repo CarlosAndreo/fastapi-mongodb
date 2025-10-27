@@ -43,7 +43,6 @@ user_router = APIRouter(prefix="/user", tags=["user"])
             },
         },
     },
-    response_model=User,
     operation_id="register",
 )
 async def register(user: UserCreate) -> User:
@@ -87,7 +86,6 @@ async def register(user: UserCreate) -> User:
             },
         },
     },
-    response_model=Token,
     operation_id="login",
 )
 async def login(
@@ -138,7 +136,6 @@ async def login(
             },
         },
     },
-    response_model=User,
     operation_id="me",
 )
 async def me(
@@ -183,7 +180,6 @@ async def me(
             },
         },
     },
-    response_model=User,
     operation_id="change_password",
 )
 async def patch_change_password(
