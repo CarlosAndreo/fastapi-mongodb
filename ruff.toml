@@ -33,8 +33,8 @@ line-length = 88
 indent-width = 4
 
 [lint]
-# Enable errors, failures, and organaize imports.
-select = ["E", "F", "I"]
+# Enable errors, failures, organaize imports and fastapi.
+select = ["E", "F", "I", "FAST"]
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
 # Ignore long line errors.
