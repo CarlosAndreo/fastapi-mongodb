@@ -12,7 +12,6 @@ db.createUser({
     user: dbRootUsername,
     pwd: dbRootPassword,
     roles: [
-        { role: "readWrite", db: `${dbName}` },
-        { role: "dbAdmin", db: `${dbName}` }
+        { role: "dbOwner", db: `${dbName}` }
     ]
 });
