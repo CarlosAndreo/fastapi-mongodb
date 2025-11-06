@@ -58,7 +58,6 @@ services:
       ME_CONFIG_MONGODB_URL: ${ME_CONFIG_MONGODB_URL}
     depends_on:
       - mongodb
-      - mongo-express
 
 volumes:
   mongo-data:
