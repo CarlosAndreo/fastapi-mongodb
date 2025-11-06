@@ -27,6 +27,18 @@ app = FastAPI(
         "name": "MIT",
         "url": "https://opensource.org/licenses/MIT",
     },
+    swagger_ui_parameters={
+        "syntaxHighlight": {"theme": "obsidian"},
+        "defaultModelsExpandDepth": -1,
+        "docExpansion": "none",
+        "displayRequestDuration": True,
+        "filter": True,
+        "persistAuthorization": True,
+        "operationsSorter": "method",
+        "tagsSorter": "alpha",
+        "showCommonExtensions": True,
+        "tryItOutEnabled": True,
+    },
 )
 
 app.add_middleware(
