@@ -19,7 +19,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v5
       
-    - name: Analysing the code with ruff
+    - name: Analyze code with ruff
       uses: astral-sh/ruff-action@v3
       with:
         args: "check"
