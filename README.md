@@ -8,9 +8,7 @@
 [![Issues][issues-shield]][issues-url]
 [![License][license-shield]][license-url]
 
-[![fastapi-mongodb][fastapi-mongodb-badge]][fastapi-mongodb-url]
-
-[Wiki](https://github.com/CarlosAndreo/fastapi-mongodb/wiki)
+<!-- [![fastapi-mongodb][fastapi-mongodb-badge]][fastapi-mongodb-url] -->
 
 </div>
 
@@ -25,8 +23,10 @@ This is a ready-to-use project template for building FastAPI applications with M
 ## Roadmap
 
 - Email verification.
-- Handler exceptions.
 - Refresh token.
+- Tests with pytest.
+- Handler exceptions.
+- Log handler.
 
 ## :hammer_and_wrench: Stack
 - [![Python][python-badge]][python-url] - Programming language.
