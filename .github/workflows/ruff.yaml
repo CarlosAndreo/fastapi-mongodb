@@ -17,7 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
+      with:
+        fetch-depth: 1
       
     - name: Analyze code with ruff
       uses: astral-sh/ruff-action@v3
