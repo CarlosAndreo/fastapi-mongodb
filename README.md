@@ -7,6 +7,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![License][license-shield]][license-url]
+[![Coverage][coverage-shield]][coverage-url]
 
 <!-- [![fastapi-mongodb][fastapi-mongodb-badge]][fastapi-mongodb-url] -->
 
@@ -105,3 +106,5 @@ uv run pytest
 [fastapi-url]: https://fastapi.tiangolo.com/
 [mongodb-badge]: https://img.shields.io/badge/MongoDB-8.2-green?style=for-the-badge&logo=mongodb&logoColor=white&labelColor=47A248
 [mongodb-url]: https://www.mongodb.com/
+[coverage-shield]: https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/CarlosAndreo/850532d425504682573f5b24d17fdf87/raw/coverage.json&style=for-the-badge
+[coverage-url]: https://github.com/CarlosAndreo/fastapi-mongodb/actions/workflows/pytest.yaml

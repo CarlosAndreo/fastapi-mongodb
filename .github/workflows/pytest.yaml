@@ -53,6 +53,30 @@ jobs:
       env:
         ME_CONFIG_MONGODB_URL: mongodb://${{ secrets.MONGO_INITDB_ROOT_USERNAME }}:${{ secrets.MONGO_INITDB_ROOT_PASSWORD }}@localhost:27017/${{ secrets.MONGO_INITDB_DATABASE }}?authSource=admin
         MONGO_INITDB_DATABASE: ${{ secrets.MONGO_INITDB_DATABASE }}
-        SECRET_KEY: ${{ secrets.SECRET_KEY }}
-        JWT_ALGORITHM: ${{ secrets.JWT_ALGORITHM }}
       run: uv run pytest
+
+    - name: Extract coverage percentage
+      run: |
+        COVERAGE=$(uv run coverage report | grep TOTAL | awk '{print $4}' | sed 's/%//')
+        echo "COVERAGE=$COVERAGE" >> $GITHUB_ENV
+        echo "Coverage: $COVERAGE%"
+
+    - name: Create coverage json for badge
+      run: |
+        cat > coverage.json << EOF
+        {
+          "schemaVersion": 1,
+          "label": "coverage",
+          "message": "${{ env.COVERAGE }}%",
+          "color": "$(if [ ${{ env.COVERAGE }} -ge 90 ]; then echo 'brightgreen'; elif [ ${{ env.COVERAGE }} -ge 80 ]; then echo 'green'; elif [ ${{ env.COVERAGE }} -ge 70 ]; then echo 'yellow'; else echo 'red'; fi)"
+        }
+        EOF
+        cat coverage.json
+
+    - name: Upload coverage to gist
+      uses: exuanbo/actions-deploy-gist@v1
+      with:
+        token: ${{ secrets.GIST_TOKEN }}
+        gist_id: ${{ secrets.GIST_ID }}
+        file_path: coverage.json
+        file_type: text
