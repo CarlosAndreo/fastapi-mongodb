@@ -1,0 +1,14 @@
+[pytest]
+pythonpath = [".", "app"]
+testpaths = ["tests"]
+python_files = ["*.py"]
+minversion = "9.0"
+addopts = [
+    "-ra",
+    "-q",
+    "--cov=app",
+    "--cov-report=term-missing",
+]
+filterwarnings = [
+    "ignore::UserWarning:tzlocal",
+]
