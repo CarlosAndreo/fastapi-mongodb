@@ -19,14 +19,15 @@ This is a ready-to-use project template for building FastAPI applications with M
 ## Features
 
 - JWT-based authentication.
+- Refresh token.
+- Tests with pytest.
+- Log handler.
+- Add indexes to MongoDB.
 
 ## Roadmap
 
 - Email verification.
-- Refresh token.
-- Tests with pytest.
 - Handler exceptions.
-- Log handler.
 
 ## :hammer_and_wrench: Stack
 - [![Python][python-badge]][python-url] - Programming language.
@@ -62,9 +63,23 @@ Run the Docker container:
 docker compose up -d
 ```
 
-The application will be available at `http://localhost:8000`.
+The application will be available at `http://localhost:8000/api/v1/docs`.
 
 The mongo-express UI will be available at `http://localhost:8081`.
+
+## :test_tube: Test
+
+> [!WARNING] 
+> When run the tests, the database is cleaned.
+
+To test the application, access to the fastapi container:
+```sh
+docker exec -it fastapi-mongodb sh
+```
+Finally, execute:
+```sh
+uv run pytest
+```
 
 ## Contributors <!-- omit in toc -->
 
