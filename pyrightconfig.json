@@ -1,0 +1,8 @@
+{
+    "include": [
+        "app",
+        "tests"
+    ],
+    "typeCheckingMode": "standard",
+    "pythonVersion": "3.14"
+}
