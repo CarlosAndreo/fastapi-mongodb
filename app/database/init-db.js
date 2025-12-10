@@ -15,3 +15,15 @@ db.createUser({
         { role: "dbOwner", db: `${dbName}` }
     ]
 });
+
+// Create indexes
+// Users collection indexes
+db.users.createIndex(
+    { username: 1 },
+    { unique: true, name: "username_unique_idx" }
+);
+
+db.users.createIndex(
+    { email: 1 },
+    { unique: true, sparse: true, name: "email_unique_idx" }
+);
