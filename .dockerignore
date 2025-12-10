@@ -2,6 +2,7 @@
 .github/
 .venv/
 .vscode/
+.pytest_cache/
 docker/
 .dockerignore
 .env
@@ -15,4 +16,4 @@ docker-compose.yaml
 LICENSE
 README.md
 ruff.toml
-uv.lock
+.DS_Store
