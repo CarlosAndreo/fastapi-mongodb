@@ -6,7 +6,7 @@ def get_collection():
     """
     Collection for user
     """
-    return mongodb.db["users"]
+    return mongodb.db["users"]  # type: ignore
 
 
 async def find_user_by_username(username: str) -> UserInDB | None:

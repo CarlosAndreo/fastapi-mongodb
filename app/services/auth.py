@@ -1,5 +1,6 @@
 from typing import Annotated
 
+from core.constants import API_PREFIX
 from core.jwt import decode_access_token
 from core.security import verify_password
 from fastapi import Depends, HTTPException, status
@@ -9,7 +10,12 @@ from schemas.user import User, UserInDB
 
 from services.user import get_user, get_user_in_db
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/v1/user/login")
+oauth2_scheme = OAuth2PasswordBearer(
+    tokenUrl=f"{API_PREFIX}/auth/login",
+    scheme_name="oauth2_scheme",
+    description="User authentication",
+    refreshUrl=f"{API_PREFIX}/auth/refresh",
+)
 
 
 async def authenticate_user(username: str, password: str) -> UserInDB | None:

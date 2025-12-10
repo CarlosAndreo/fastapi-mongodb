@@ -26,8 +26,8 @@ async def create_user(user: UserCreate) -> User | None:
     user_in_db = UserInDB(
         **user.model_dump(exclude={"password"}), hashed_password=hashed_password
     )
-    user = await insert_user(user=user_in_db)
-    return User(**user.model_dump(exclude={"hashed_password"})) if user else None
+    created_user = await insert_user(user=user_in_db)
+    return User(**created_user.model_dump(exclude={"hashed_password"})) if created_user else None
 
 
 async def change_password(user: User, new_password: str) -> User | None:
@@ -38,5 +38,5 @@ async def change_password(user: User, new_password: str) -> User | None:
     user_in_db = UserInDB(
         **user.model_dump(exclude={"password"}), hashed_password=hashed_password
     )
-    user = await update_user(user=user_in_db)
-    return User(**user.model_dump(exclude={"hashed_password"})) if user else None
+    updated_user = await update_user(user=user_in_db)
+    return User(**updated_user.model_dump(exclude={"hashed_password"})) if updated_user else None

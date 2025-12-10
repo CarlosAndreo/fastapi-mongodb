@@ -10,6 +10,9 @@ class Settings(BaseSettings):
     SECRET_KEY: str = "your_secret_key"
     JWT_ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 10080  # 7 days
+    REFRESH_TOKEN_EXPIRE_DAYS: int = 7
+    LOG_LEVEL: str = "INFO"
+    LOG_JSON_FORMAT: bool = True
 
     # MongoDB Configuration
     MONGO_INITDB_DATABASE: str
@@ -22,4 +25,4 @@ class Settings(BaseSettings):
     )
 
 
-settings = Settings()
+settings = Settings()  # type: ignore[call-arg]
