@@ -17,6 +17,47 @@
 
 This is a ready-to-use project template for building FastAPI applications with MongoDB as the database. It's designed to help you get started quickly with a clean architecture, pre-configured settings, and best practices for scalability and maintainability.
 
+## :file_folder: Project Structure
+
+```
+fastapi-mongodb/
+├── app/
+│   ├── core/                # Core configuration and utilities
+│   │   ├── config.py        # Environment variables and configuration
+│   │   ├── constants.py     # Application constants
+│   │   ├── jwt.py           # JWT token handling
+│   │   ├── logger.py        # Logging configuration
+│   │   └── security.py      # Security utilities
+│   ├── database/
+│   │   ├── init-db.js       # MongoDB initialization script
+│   │   └── mongodb.py       # MongoDB connection and configuration
+│   ├── middlewares/
+│   │   └── logging.py       # Logging middleware
+│   ├── repositories/
+│   │   └── user.py          # User data access layer
+│   ├── routers/
+│   │   ├── auth.py          # Authentication endpoints
+│   │   └── me.py            # Current user endpoints
+│   ├── schemas/
+│   │   └── user.py          # Pydantic user schemas
+│   ├── services/
+│   │   ├── auth.py          # Authentication business logic
+│   │   └── user.py          # User business logic
+│   └── main.py              # Application entry point
+├── docker/
+│   └── fastapi/
+│       └── Dockerfile       # FastAPI Docker image
+├── tests/
+│   ├── conftest.py          # Pytest configuration
+│   ├── test_auth.py         # Authentication tests
+│   └── test_me.py           # User endpoints tests
+├── .env.template            # Environment variables template
+├── docker-compose.yaml      # Docker Compose configuration
+├── pyproject.toml           # Project dependencies and configuration
+├── pytest.toml              # Pytest configuration
+└── ruff.toml                # Linter configuration
+```
+
 ## Features
 
 - JWT-based authentication.
