@@ -19,7 +19,7 @@ jobs:
 
     services:
       mongodb:
-        image: mongo:8.2.2-noble
+        image: mongo:8.2.3-noble
         env:
           MONGO_INITDB_ROOT_USERNAME: ${{ secrets.MONGO_INITDB_ROOT_USERNAME }}
           MONGO_INITDB_ROOT_PASSWORD: ${{ secrets.MONGO_INITDB_ROOT_PASSWORD }}
