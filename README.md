@@ -94,6 +94,15 @@ git clone https://github.com/CarlosAndreo/fastapi-mongodb.git
 cd fastapi-mongodb
 ```
 
+Create the `.env` file from the template:
+
+```bash
+cp .env.template .env
+```
+
+> [!NOTE]
+> Edit the `.env` file and update the values according to your needs. Make sure to set a strong `SECRET_KEY` (you can generate one with `openssl rand -hex 32`).
+
 Build the Docker image:
 
 ```bash
