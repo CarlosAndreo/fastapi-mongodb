@@ -21,9 +21,10 @@ This is a ready-to-use project template for building FastAPI applications with M
 
 - JWT-based authentication.
 - Refresh token.
+- Middleware.
 - Tests with pytest.
 - Log handler.
-- Add indexes to MongoDB.
+- Indexes to MongoDB.
 
 ## Roadmap
 
