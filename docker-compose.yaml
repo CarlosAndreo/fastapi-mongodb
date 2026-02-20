@@ -72,4 +72,5 @@ volumes:
 
 networks:
   fastapi-network:
+    name: fastapi-network
     driver: bridge
