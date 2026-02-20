@@ -151,9 +151,9 @@ uv run pytest
 [issues-url]: https://github.com/CarlosAndreo/fastapi-mongodb/issues
 [license-shield]: https://img.shields.io/github/license/CarlosAndreo/fastapi-mongodb.svg?style=for-the-badge
 [license-url]: https://github.com/CarlosAndreo/fastapi-mongodb/blob/main/LICENSE
-[python-badge]: https://img.shields.io/badge/Python-3.14.0-blue?style=for-the-badge&logo=python&logoColor=white&labelColor=3776AB
-[python-url]: https://www.python.org/downloads/release/python-3140/
-[fastapi-badge]: https://img.shields.io/badge/FastAPI-0.128.0-blue?style=for-the-badge&logo=fastapi&logoColor=white&labelColor=009688
+[python-badge]: https://img.shields.io/badge/Python-3.14.3-blue?style=for-the-badge&logo=python&logoColor=white&labelColor=3776AB
+[python-url]: https://www.python.org/downloads/release/python-3143/
+[fastapi-badge]: https://img.shields.io/badge/FastAPI-0.129.0-blue?style=for-the-badge&logo=fastapi&logoColor=white&labelColor=009688
 [fastapi-url]: https://fastapi.tiangolo.com/
 [mongodb-badge]: https://img.shields.io/badge/MongoDB-8.2-green?style=for-the-badge&logo=mongodb&logoColor=white&labelColor=47A248
 [mongodb-url]: https://www.mongodb.com/

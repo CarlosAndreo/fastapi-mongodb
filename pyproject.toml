@@ -9,20 +9,20 @@ authors = [{ name = "Carlos Andreo", email = "c.andreolopez@gmail.com" }]
 
 [dependency-groups]
 prod = [
-  "fastapi[standard]==0.128.0",
+  "fastapi[standard]==0.129.0",
   "motor==3.7.1",
   "pwdlib[argon2]==0.3.0",
-  "pydantic-settings==2.12.0",
-  "pyjwt==2.10.1",
+  "pydantic-settings==2.13.1",
+  "pyjwt==2.11.0",
 ]
 lint = [
-  "ruff==0.14.10",
+  "ruff==0.15.2",
 ]
 type = [
-  "pyright==1.1.407",
+  "pyright==1.1.408",
 ]
 test = [
-  "faker==40.1.0",
+  "faker==40.4.0",
   "httpx==0.28.1",
   "pytest==9.0.2",
   "pytest-cov==7.0.0",
