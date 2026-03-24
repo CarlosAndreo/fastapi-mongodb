@@ -33,12 +33,13 @@ line-length = 88
 indent-width = 4
 
 [lint]
-# Enable errors, failures, organaize imports and fastapi.
-select = ["E", "F", "I", "FAST"]
+# Enable errors, failures, organize imports, warnings, naming conventions,
+# pyupgrade, bugbear and simplify rules.
+select = ["E", "F", "I", "W", "N", "UP", "B", "SIM"]
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
-# Ignore long line errors.
-ignore = ["E501"]
+# Ignore long line errors and FastAPI Depends() false positives.
+ignore = ["E501", "B008"]
 
 [format]
 # Like Black, use double quotes for strings.
