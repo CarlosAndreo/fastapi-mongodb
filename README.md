@@ -19,7 +19,7 @@ This is a ready-to-use project template for building FastAPI applications with M
 
 ## :file_folder: Project Structure
 
-```
+```text
 fastapi-mongodb/
 ├── app/
 │   ├── core/                # Core configuration and utilities
@@ -73,6 +73,7 @@ fastapi-mongodb/
 - Handler exceptions.
 
 ## :hammer_and_wrench: Stack
+
 - [![Python][python-badge]][python-url] - Programming language.
 - [![FastAPI][fastapi-badge]][fastapi-url] - Python framework for web applications to expose the API.
 - [![MongoDB][mongodb-badge]][mongodb-url] - NoSQL database.
@@ -121,14 +122,17 @@ The mongo-express UI will be available at `http://localhost:8081`.
 
 ## :test_tube: Test
 
-> [!WARNING] 
+> [!WARNING]
 > When run the tests, the database is cleaned.
 
 To test the application, access to the fastapi container:
+
 ```sh
 docker exec -it fastapi-mongodb sh
 ```
+
 Finally, execute:
+
 ```sh
 uv run pytest
 ```
@@ -139,8 +143,6 @@ uv run pytest
   <img src="https://contrib.rocks/image?repo=CarlosAndreo/fastapi-mongodb" />
 </a>
 
-[fastapi-mongodb-badge]: https://img.shields.io/github/v/release/CarlosAndreo/fastapi-mongodb?label=fastapi-mongodb&color=blue
-[fastapi-mongodb-url]: https://github.com/CarlosAndreo/fastapi-mongodb/releases/latest
 [contributors-shield]: https://img.shields.io/github/contributors/CarlosAndreo/fastapi-mongodb.svg?style=for-the-badge
 [contributors-url]: https://github.com/CarlosAndreo/fastapi-mongodb/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/CarlosAndreo/fastapi-mongodb.svg?style=for-the-badge
@@ -153,7 +155,7 @@ uv run pytest
 [license-url]: https://github.com/CarlosAndreo/fastapi-mongodb/blob/main/LICENSE
 [python-badge]: https://img.shields.io/badge/Python-3.14.3-blue?style=for-the-badge&logo=python&logoColor=white&labelColor=3776AB
 [python-url]: https://www.python.org/downloads/release/python-3143/
-[fastapi-badge]: https://img.shields.io/badge/FastAPI-0.133.1-blue?style=for-the-badge&logo=fastapi&logoColor=white&labelColor=009688
+[fastapi-badge]: https://img.shields.io/badge/FastAPI-0.135.1-blue?style=for-the-badge&logo=fastapi&logoColor=white&labelColor=009688
 [fastapi-url]: https://fastapi.tiangolo.com/
 [mongodb-badge]: https://img.shields.io/badge/MongoDB-8.2-green?style=for-the-badge&logo=mongodb&logoColor=white&labelColor=47A248
 [mongodb-url]: https://www.mongodb.com/
