@@ -1,4 +1,4 @@
-from typing import Dict, Generator
+from collections.abc import Generator
 
 import pytest
 from faker import Faker
@@ -29,7 +29,7 @@ def clean_database():
 
 
 @pytest.fixture(scope="function")
-def client() -> Generator[TestClient, None, None]:
+def client() -> Generator[TestClient]:
     """Provide a TestClient for making API requests.
 
     Yields:
@@ -40,7 +40,7 @@ def client() -> Generator[TestClient, None, None]:
 
 
 @pytest.fixture(scope="function")
-def valid_user_data() -> Dict:
+def valid_user_data() -> dict:
     """Provide valid user registration data using Faker.
 
     Returns:
@@ -56,7 +56,7 @@ def valid_user_data() -> Dict:
 
 
 @pytest.fixture(scope="function")
-def registered_user(client, valid_user_data) -> Dict:
+def registered_user(client, valid_user_data) -> dict:
     """Register a user and return user data with credentials.
 
     Args:
