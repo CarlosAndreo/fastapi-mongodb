@@ -48,8 +48,8 @@ async def get_current_user(
         username = payload.get("sub")
         if not username:
             raise credentials_exception
-    except InvalidTokenError:
-        raise credentials_exception
+    except InvalidTokenError as err:
+        raise credentials_exception from err
     user = await get_user(username=username)
     if not user:
         raise credentials_exception

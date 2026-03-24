@@ -2,9 +2,19 @@ import json
 import logging
 import logging.config
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
-from typing import Any, Dict
+from typing import Any
+
+_EXTRA_LOG_FIELDS = (
+    "request_id",
+    "method",
+    "path",
+    "client_host",
+    "query_params",
+    "status_code",
+    "duration_ms",
+)
 
 
 class JsonFormatter(logging.Formatter):
@@ -23,8 +33,8 @@ class JsonFormatter(logging.Formatter):
         Returns:
             JSON-formatted string with log information.
         """
-        log_data: Dict[str, Any] = {
-            "timestamp": datetime.now(timezone.utc).isoformat(),
+        log_data: dict[str, Any] = {
+            "timestamp": datetime.now(UTC).isoformat(),
             "level": record.levelname,
             "logger": record.name,
             "module": record.module,
@@ -34,22 +44,10 @@ class JsonFormatter(logging.Formatter):
         }
         if record.exc_info:
             log_data["exception"] = self.formatException(record.exc_info)
-        # core/logging.py
-        if hasattr(record, "request_id"):
-            log_data["request_id"] = getattr(record, "request_id")
-        if hasattr(record, "method"):
-            log_data["method"] = getattr(record, "method")
-        if hasattr(record, "path"):
-            log_data["path"] = getattr(record, "path")
-        if hasattr(record, "client_host"):
-            log_data["client_host"] = getattr(record, "client_host")
-        if hasattr(record, "query_params"):
-            log_data["query_params"] = getattr(record, "query_params")
-        if hasattr(record, "status_code"):
-            log_data["status_code"] = getattr(record, "status_code")
-        if hasattr(record, "duration_ms"):
-            log_data["duration_ms"] = getattr(record, "duration_ms")
-        # all routers
+        for field in _EXTRA_LOG_FIELDS:
+            value = getattr(record, field, None)
+            if value is not None:
+                log_data[field] = value
         return json.dumps(log_data, default=str)
 
 

@@ -1,6 +1,6 @@
 import time
 import uuid
-from typing import Callable
+from collections.abc import Callable
 
 from core.logger import get_logger
 from fastapi import Request, Response
